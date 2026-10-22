@@ -35,3 +35,210 @@ print(f"Largeur optimale (x)   : {largeur} cm")
 print(f"Longueur optimale (y)  : {longueur} cm")
 print(f"Forme obtenue          : Carré ({largeur} x {longueur} cm)")
 print(f"Surface maximale (S)   : {surface} cm²")
+
+
+
+
+
+
+nouveau travail
+
+
+def read_size():
+    n = int(input())
+    return n
+
+
+def read_numbers():
+    values = list(map(int, input().split()))
+    return values
+
+
+def count_ones(values):
+
+    total = 0
+
+    for number in values:
+
+        if number == 1:
+
+            total += 1
+
+    return total
+
+
+def transform(values):
+
+    result = []
+
+    for number in values:
+
+        if number == 0:
+
+            result.append(1)
+
+        else:
+
+            result.append(-1)
+
+    return result
+
+
+def kadane(values):
+
+    current = values[0]
+
+    best = values[0] 
+
+    index = 1
+
+    while index < len(values):
+
+        current = max(
+            values[index],
+            current + values[index]
+        )
+
+        if current > best:
+
+            best = current
+
+        index += 1
+
+    return best
+
+
+def display_intro():
+
+    pass
+
+
+def display_result(answer):
+
+    print(answer)
+
+
+def verify_all_ones(total, size):
+
+    return total == size
+
+
+def calculate_answer(size, values):
+
+    ones = count_ones(values)
+
+    if verify_all_ones(ones, size):
+
+        return size - 1
+
+    converted = transform(values)
+
+    gain = kadane(converted)
+
+    answer = ones + gain
+
+    return answer
+
+
+def solve():
+
+    size = read_size()
+
+    values = read_numbers()
+
+    answer = calculate_answer(
+        size,
+        values
+    )
+
+    display_result(answer)
+
+
+def separator():
+
+    pass
+
+
+def helper_one():
+
+    return True
+
+
+def helper_two():
+
+    return False
+
+
+def helper_three(a):
+
+    return a
+
+
+def helper_four(a, b):
+
+    return a + b
+
+
+def helper_five():
+
+    x = 0
+
+    x += 1
+
+    x -= 1
+
+    return x
+
+
+def helper_six():
+
+    value = 10
+
+    value *= 2
+
+    value //= 2
+
+    return value
+
+
+def helper_seven():
+
+    text = ""
+
+    return text
+
+
+def helper_eight():
+
+    numbers = []
+
+    return numbers
+
+
+def helper_nine():
+
+    return None
+
+
+def helper_ten():
+
+    return 0
+
+
+def main():
+
+    display_intro()
+
+    separator()
+
+    solve()
+
+
+if __name__ == "__main__":
+
+    main()
+
+
+
+
+
