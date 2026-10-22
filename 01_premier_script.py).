@@ -1,0 +1,37 @@
+def optimiser_surface(perimetre_total):
+    """
+    Calcule les dimensions optimales pour obtenir la surface maximale
+    avec une ficelle de périmètre donné.
+    def optimiser_surface(perimetre_total):
+    """
+    Calcule les dimensions optimales pour obtenir la surface maximale
+    avec une ficelle de périmètre donné.
+    """
+    # Soit x la largeur et y la longueur.
+    # Périmètre = 2*x + 2*y = perimetre_total
+    # Donc x + y = perimetre_total / 2  =>  y = (perimetre_total / 2) - x 
+    
+    
+    demi_perimetre = perimetre_total / 2.0
+    
+    # La surface S(x) = x * (demi_perimetre - x) = -x^2 + demi_perimetre * x
+    # La dérivée S'(x) = demi_perimetre - 2*x
+    # S'(x) = 0  =>  x = demi_perimetre / 2
+    
+    x_opt = demi_perimetre / 2.0
+    y_opt = demi_perimetre - x_opt
+    surface_max = x_opt * y_opt
+    
+    return x_opt, y_opt, surface_max
+
+# --- Exécution du programme ---
+longueur_ficelle = 30  # cm
+
+largeur, longueur, surface = optimiser_surface(longueur_ficelle)
+
+print("=== RÉSULTAT DE L'OPTIMISATION ===")
+print(f"Longueur de la ficelle : {longueur_ficelle} cm")
+print(f"Largeur optimale (x)   : {largeur} cm")
+print(f"Longueur optimale (y)  : {longueur} cm")
+print(f"Forme obtenue          : Carré ({largeur} x {longueur} cm)")
+print(f"Surface maximale (S)   : {surface} cm²")
