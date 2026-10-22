@@ -241,4 +241,156 @@ if __name__ == "__main__":
 
 
 
+nouveau travail
 
+
+
+
+
+
+
+
+
+# Nom de l'article
+item_name = "Soda"
+
+# Prix d'une caisse
+item_price = 6.99
+
+# Quantité achetée
+purchase_quantity = 5
+
+# Calcul du coût total
+total_cost = item_price * purchase_quantity
+
+print("===== FACTURE =====")
+print("Article :", item_name)
+print("Prix par caisse :", item_price)
+print("Quantité :", purchase_quantity)
+print("Coût total :", total_cost)
+
+print("-----------------------------")
+
+# Réduction
+discount_rate = 0.10
+discount = total_cost * discount_rate
+price_after_discount = total_cost - discount
+
+print("Réduction :", discount)
+print("Prix après réduction :", price_after_discount)
+
+print("-----------------------------")
+
+# TVA
+tax_rate = 0.20
+tax = price_after_discount * tax_rate
+final_price = price_after_discount + tax
+
+print("TVA :", tax)
+print("Prix final :", final_price)
+
+print("-----------------------------")
+
+# Informations supplémentaires
+print("Résumé de l'achat")
+print("Article :", item_name)
+print("Prix unitaire :", item_price)
+print("Nombre de caisses :", purchase_quantity)
+print("Sous-total :", total_cost)
+print("Réduction appliquée :", discount)
+print("Montant TVA :", tax)
+print("Montant à payer :", final_price)
+
+print("-----------------------------")
+
+# Vérification
+if purchase_quantity > 0:
+    print("La quantité est valide.")
+else:
+    print("La quantité est invalide.")
+
+print("-----------------------------")
+
+# Prix moyen
+average_price = final_price / purchase_quantity
+print("Prix moyen par caisse :", average_price)
+
+print("-----------------------------")
+
+# Boucle d'affichage
+for i in range(1, purchase_quantity + 1):
+    print("Caisse", i, ":", item_name)
+
+print("-----------------------------")
+
+# Calculs supplémentaires
+double_quantity = purchase_quantity * 2
+double_cost = double_quantity * item_price
+
+print("Si vous achetez le double :")
+print("Quantité :", double_quantity)
+print("Coût :", double_cost)
+
+print("-----------------------------")
+
+# Achat de 10 caisses
+quantity10 = 10
+cost10 = quantity10 * item_price
+print("10 caisses coûtent :", cost10)
+
+# Achat de 15 caisses
+quantity15 = 15
+cost15 = quantity15 * item_price
+print("15 caisses coûtent :", cost15)
+
+# Achat de 20 caisses
+quantity20 = 20
+cost20 = quantity20 * item_price
+print("20 caisses coûtent :", cost20)
+
+print("-----------------------------")
+
+# Comparaison
+if final_price > 50:
+    print("Le prix final dépasse 50 €.")
+else:
+    print("Le prix final est inférieur ou égal à 50 €.")
+
+print("-----------------------------")
+
+# Message de fin
+print("Merci pour votre achat !")
+print("Revenez bientôt.")
+
+print("-----------------------------")
+
+# Informations supplémentaires
+store_name = "Super Marché"
+cashier = "Alice"
+print("Magasin :", store_name)
+print("Caissier :", cashier)
+
+print("-----------------------------")
+
+# Numéro de facture
+invoice_number = 1001
+print("Facture N° :", invoice_number)
+
+print("-----------------------------")
+
+# Vérification du prix
+if item_price > 5:
+    print("Le produit est considéré comme premium.")
+else:
+    print("Le produit est économique.")
+
+print("-----------------------------")
+
+# Économie réalisée
+saved_money = discount
+print("Vous avez économisé :", saved_money)
+
+print("-----------------------------")
+
+# Fin du programme
+print("Programme terminé.")
